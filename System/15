@@ -1,0 +1,2 @@
+ps -eaf | prosses_name
+kill prossesUID

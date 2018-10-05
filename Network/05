@@ -1,1 +1,1 @@
-e2r5p8% nslookup slash16.org | head -1 | awk '{print $2}'
+nslookup slash16.org | head -1 | awk '{print $2}'

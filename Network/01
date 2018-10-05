@@ -1,1 +1,2 @@
 ifconfig -l
+ifconfig | grep mtu | awk '{print $1}' | awk '{print substr($0, 1, length($0) - 1)}'

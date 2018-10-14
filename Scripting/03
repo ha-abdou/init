@@ -1,1 +1,1 @@
-ls -sh $1 | sort -h
+ls -1S $1

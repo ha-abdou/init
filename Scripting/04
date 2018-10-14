@@ -1,0 +1,16 @@
+#!/bin/sh
+
+if [ ! -f /root/crontab_hash ]; then
+	md5sum /etc/crontab > /root/crontab_hash
+fi
+
+old_hash=$(cat /root/crontab_hash)
+new_hash=$(md5sum /etc/crontab)
+
+if [ "$old_hash" != "$new_hash" ]; then
+	echo "/etc/crontab has been modified" | mail -s "crontab" root@localhost
+	md5sum /etc/crontab > /root/crontab_hash
+fi
+
+#echo '0 0 * * * sudo sh /root/this_script.sh' | crontab
+

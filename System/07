@@ -1,2 +1,1 @@
-ps ax | grep sshd
-cat /var/run/sshd.pid
+service ssh status | grep 'PID' | awk -F " " '{print $3}'

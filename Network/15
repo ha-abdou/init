@@ -1,2 +1,2 @@
-https://en.wikipedia.org/wiki/Hosts_(file)
+#https://en.wikipedia.org/wiki/Hosts_(file)
 echo 'intra.42.fr 46.19.122.85' >> /etc/hosts
